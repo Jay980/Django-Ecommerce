@@ -1,0 +1,153 @@
+<html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+  
+  <!-- jQuery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> <!-- range slider -->
+
+  <!-- font awesome style -->
+  <link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+</head>
+<body>
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="header_top">
+              <div class="container-fluid">
+                <div class="top_nav_container">
+                  <div class="contact_nav">
+                    <a href="">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <span>
+                        Call : +01 123455678990
+                      </span>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <span>
+                        Email : demo@gmail.com
+                      </span>
+                    </a>
+                  </div>
+                  <from class="search_form">
+                    <form  action="/search" method="get">
+                    <input style="display: inline-block;" type="text" class="form-control" name="query" id="query" placeholder="Search here...">
+                    <button class="" type="submit">
+                    </form>
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </from>
+                  <div class="user_option_box">
+                    <a href="/my-profile" class="account-link">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                      <span>
+                        My Account
+                      </span>
+                    </a>
+                    <a href="/my-profile" class="account-link">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                      <span>
+                       Logout
+                      </span>
+                    </a>
+                    <a href="/cart" class="cart-link">
+                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <span>
+                        Cart <span class="item-number " style="color:yellow;">(    {{ product_count_in_cart }} )  </span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+            <div class="header_bottom">
+              <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                  <a class="navbar-brand" href="index.html">
+                    <span>
+                      Click kart
+                    </span>
+                  </a>
+      
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""> </span>
+                  </button>
+      
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="/customer-home">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/my-order">Your Orders</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="product.html">Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="why.html">Why Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/send-feedback">Send Feedback</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </header>
+<!-- content start-->
+{% block content %}
+
+{% endblock content %}
+<!-- content end-->
+<br><br><br>
+
+
+<script>
+$(document).ready(function(){
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "70%";
+
+document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+document.body.style.backgroundColor = "rgba(0,0,0,0)";
+}
+
+
+});
+</script>
+ <!-- jQery -->
+ <script src="/static/js/jquery-3.4.1.min.js"></script>
+ <!-- bootstrap js -->
+ <script src="/static/js/bootstrap.js"></script>
+ <!-- custom js -->
+ <script src="/static/js/custom.js"></script>
+
+</body>
+</html>
